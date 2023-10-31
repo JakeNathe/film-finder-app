@@ -25,6 +25,6 @@ function App() {
       <SimpleBottomNavigation/>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

@@ -31,8 +31,8 @@ export default function SimpleBottomNavigation() {
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);
-        }}
-      >
+        }}>
+
         <BottomNavigationAction 
         sx={{color: "white"}}
         label="Popular Now" 
