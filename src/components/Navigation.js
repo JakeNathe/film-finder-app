@@ -24,7 +24,7 @@ export default function SimpleBottomNavigation() {
       >
         <BottomNavigationAction 
         sx={{color: "white"}}
-        label="Trending" 
+        label="Popular Now" 
         icon={<TrendingUpIcon />} 
         />
         <BottomNavigationAction 
