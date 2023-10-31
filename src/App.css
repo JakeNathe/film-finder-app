@@ -1,19 +1,14 @@
-.App {
-  text-align: center;
+.app {
+  min-height: 100vh;
+  padding-top: 120px;
+  padding-bottom: 70px;
+  background-color: rgb(62, 60, 79);
+  color: white;
 }
 
-.header {
-  width: 100%;
-  justify-content: center;
-  text-transform: uppercase;
-  position: fixed;  /* should not move */
-  display: flex;
-  background-color: slateblue;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: calc(10px + 2vmin);
-  padding-bottom: 10px;
-  box-shadow: 0px, 1px, 5px;
-  color: white;
-  cursor: pointer;
-  z-index: 100;  /* stay at top */
+@media (max-width:700px){
+  .app {
+    padding-top: 70px;
+  }
 }
+

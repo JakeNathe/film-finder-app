@@ -1,11 +1,14 @@
 import './App.css';
 import Header from "./components/Header";
+import SimpleBottomNavigation from './components/Navigation';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <>
+      <Header/>
+      <div className="app">cxv</div>
+      <SimpleBottomNavigation/>
+    </>
   );
 }
 
