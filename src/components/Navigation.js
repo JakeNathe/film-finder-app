@@ -1,6 +1,8 @@
 /* Navigation code is from material ui: https://mui.com/material-ui/react-bottom-navigation/ */
 
 import * as React from 'react';
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
@@ -10,7 +12,16 @@ import SearchIcon from '@mui/icons-material/Search';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
 export default function SimpleBottomNavigation() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
+  const navigate = useNavigate();
+
+
+  useEffect(() => {
+    if (value === 0) navigate("/");
+    else if (value === 1) navigate("/movies");
+    else if (value === 2) navigate("/series");
+    else if (value === 3) navigate("/search");
+  }, [value, navigate]);
 
   return (
     <Box sx={{ width: "100%", position: "fixed", bottom: 0, zIndex: 100}}>

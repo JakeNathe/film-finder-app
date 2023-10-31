@@ -2,7 +2,7 @@
     width: 100%;
     justify-content: center;
     text-transform: uppercase;
-    position: fixed;  /* should not move */
+    position: fixed;  /* causing issues with too large of screen? */
     display: flex;
     background-color: rgb(106, 90, 205);
     font-family: "Nunito Sans", sans-serif;

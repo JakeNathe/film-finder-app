@@ -2,7 +2,9 @@ import React from 'react'
 
 const Popular = () => {
   return (
-    <div>Popular</div>
+    <div>
+        <span className="title">Popular</span>
+    </div>
   )
 }
 
