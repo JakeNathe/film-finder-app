@@ -3,23 +3,25 @@ import "./Pages.css";
 import IndividualContent from '../components/IndividualContent';
 import { useState, useEffect } from "react";
 import axios from "axios";
+import PageNumber from '../components/PageNumber';
 
 
 
 const Popular = () => {
-
-  const [content, setContent] = useState([]);
+  const [page, setPage] = useState(1);  // to return more than 1 page from api request
+  const [content, setContent] = useState([]);  // content form api
 
   const fetchPopular = async () => {
     // fetch and destructure data
-    const {data} = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}`);
-    console.log(data);
+    const {data} = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`);
     setContent(data.results);
   };
 
   useEffect(() => {
     fetchPopular();
-  }, []);
+  }, [page]);
+
+
 
 // return individual movie/tvshow items with relevant data
   return (
@@ -36,6 +38,7 @@ const Popular = () => {
           vote_average={c.vote_average}
           />)}
         </div>
+        <PageNumber setPage={setPage}/>
     </div>
   )
 };

@@ -1,12 +1,14 @@
 import React from 'react';
 import { img_size_300, unavailable} from '../config/config';
 import "./IndividualContent.css";
+import { Badge } from "@mui/material";
 
 // break up returned items to invidual movie/show
 
 const IndividualContent = ({id, poster, title, media_type, date, vote_average}) => {
   return (
     <div className="content">
+      <Badge className="badge" badgeContent={vote_average} color={vote_average > 7.0? "primary" : "secondary"}/>
       <img className="poster" src={ poster? `${img_size_300}/${poster}` : unavailable} alt={title}/>
       <b className="title">{title}</b>
       <span className="subtitle">

@@ -1,3 +1,6 @@
+/*
+Using The Movie Database API https://developer.themoviedb.org/docs
+*/
 import './App.css';
 import Header from "./components/Header";
 import SimpleBottomNavigation from './components/Navigation';

@@ -1,5 +1,6 @@
-/* Navigation code is from material ui: https://mui.com/material-ui/react-bottom-navigation/ */
-
+/* 
+Navigation code is from material ui: https://mui.com/material-ui/react-bottom-navigation/ 
+*/
 import * as React from 'react';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -10,11 +11,18 @@ import MovieIcon from '@mui/icons-material/Movie';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 import SearchIcon from '@mui/icons-material/Search';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
+const darkTheme = createTheme({
+  palette: {
+      mode: "dark",
+  },
+});
 
 export default function SimpleBottomNavigation() {
   const [value, setValue] = useState(0);
   const navigate = useNavigate();
-
 
   useEffect(() => {
     if (value === 0) navigate("/");
@@ -25,36 +33,39 @@ export default function SimpleBottomNavigation() {
 
   return (
     <Box sx={{ width: "100%", position: "fixed", bottom: 0}}>
+      <ThemeProvider theme={darkTheme}>
+      <CssBaseline/>
 
-      <BottomNavigation sx={{backgroundColor: "#212025"}}
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}>
+        <BottomNavigation
+          showLabels
+          value={value}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}>
 
-        <BottomNavigationAction 
-        sx={{color: "white"}}
-        label="Popular Now" 
-        icon={<TrendingUpIcon />} 
-        />
-        <BottomNavigationAction 
-        sx={{color: "white"}}
-        label="Movies" 
-        icon={<MovieIcon />} 
-        />
-        <BottomNavigationAction 
-        sx={{color: "white"}}
-        label="TV Series" 
-        icon={<LiveTvIcon />} 
-        />
-        <BottomNavigationAction 
-        sx={{color: "white"}}
-        label="Search" 
-        icon={<SearchIcon />} 
-        />
-      </BottomNavigation>
+          <BottomNavigationAction 
+          sx={{color: "white"}}
+          label="Popular Now" 
+          icon={<TrendingUpIcon />} 
+          />
+          <BottomNavigationAction 
+          sx={{color: "white"}}
+          label="Movies" 
+          icon={<MovieIcon />} 
+          />
+          <BottomNavigationAction 
+          sx={{color: "white"}}
+          label="TV Series" 
+          icon={<LiveTvIcon />} 
+          />
+          <BottomNavigationAction 
+          sx={{color: "white"}}
+          label="Search" 
+          icon={<SearchIcon />} 
+          />
+        </BottomNavigation>
 
+      </ThemeProvider>
     </Box>
   );
 }
