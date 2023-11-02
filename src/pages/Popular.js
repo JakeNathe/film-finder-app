@@ -1,9 +1,10 @@
 import React from 'react';
+import "./Pages.css";
+import IndividualContent from '../components/IndividualContent/IndividualContent';
 import { useState, useEffect } from "react";
 import axios from "axios";
-import '../../components/IndividualContent/IndividualContent';
-import IndividualContent from '../../components/IndividualContent/IndividualContent';
-import "./Popular.css";
+
+
 
 const Popular = () => {
 

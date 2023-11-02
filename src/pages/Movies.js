@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import "./Pages.css";
 
-const Series = () => {
+const Movies = () => {
   return (
     <div>
-        <span className="title">Series</span>
+        <span className="pageTitle">Movies</span>
         <button>Action</button>
         <button>Horror</button>
         <button>Comedy</button>
@@ -11,7 +12,8 @@ const Series = () => {
         <button>etc</button>
         <button>Clear All Filters</button>
     </div>
+    
   )
 }
 
-export default Series;
+export default Movies;

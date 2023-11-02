@@ -1,3 +1,7 @@
+.pageTitle {
+    
+}
+
 .popular {
     display: flex;
     flex-wrap: wrap;
@@ -5,6 +9,15 @@
     font-size: 36px;
 }
 
-.pageTitle {
-    
+.movies {
+
 }
+
+.series {
+
+}
+
+.search {
+
+}
+
