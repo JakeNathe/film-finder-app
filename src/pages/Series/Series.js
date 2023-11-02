@@ -9,6 +9,7 @@ const Series = () => {
         <button>Comedy</button>
         <button>Romance</button>
         <button>etc</button>
+        <button>Clear All Filters</button>
     </div>
   )
 }

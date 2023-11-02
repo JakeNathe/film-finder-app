@@ -1,0 +1,10 @@
+.popular {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 36px;
+}
+
+.pageTitle {
+    
+}
