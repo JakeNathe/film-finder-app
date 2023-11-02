@@ -4,7 +4,7 @@ import "./Pages.css";
 const Movies = () => {
   return (
     <div>
-        <span className="pageTitle">Movies</span>
+        <span className="pageTitle">MOVIES</span>
         <button>Action</button>
         <button>Horror</button>
         <button>Comedy</button>

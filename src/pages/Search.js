@@ -4,7 +4,7 @@ import "./Pages.css";
 const Search = () => {
   return (
     <div>
-        <span className="pageTitle">Search</span>
+        <span className="pageTitle">SEARCH</span>
 
         <form id="form"> 
             <input type="search" placeholder="Search..."/>

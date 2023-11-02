@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Pages.css";
-import IndividualContent from '../components/IndividualContent/IndividualContent';
+import IndividualContent from '../components/IndividualContent';
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -24,7 +24,7 @@ const Popular = () => {
 // return individual movie/tvshow items with relevant data
   return (
     <div>
-        <span className="pageTitle">Popular Now</span>
+        <span className="pageTitle">POPULAR NOW</span>
         <div className="popular">
           {content && content.map((c) => <IndividualContent 
           key={c.id} 

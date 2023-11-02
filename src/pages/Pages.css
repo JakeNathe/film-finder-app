@@ -1,4 +1,10 @@
 .pageTitle {
+    display: flex;
+    justify-content: center;
+    font-family: "Nunito Sans", sans-serif;
+    border-radius: 45px;
+    font-size: 2vw;
+    padding: 3px;
     
 }
 
@@ -6,7 +12,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    font-size: 36px;
 }
 
 .movies {

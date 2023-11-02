@@ -1,4 +1,4 @@
-.media {
+.content {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -10,14 +10,8 @@
     background-color: rgb(31, 29, 40);
 }
 
-.media:hover {
+.content:hover {
     background-color: rgb(106, 90, 205);;
-}
-
-@media (max-width: 500px) {
-    .media {
-        width: 45%
-    }
 }
 
 .poster {
