@@ -4,7 +4,7 @@
     position: relative;
     font-family: "Nunito Sans", sans-serif;
     width: 200px;
-    padding: 0px 7px 0px 7px;
+    padding: 7px 7px 0px 7px;
     margin: 5px 0px;
     border-radius: 5px;
     background-color: rgb(31, 29, 40);
@@ -36,7 +36,16 @@
 
 .subtitle {
     display: flex;
-    font-size: 1.2vw;
+    font-size: 1vw;
     justify-content: space-between;
     padding: 1px 2px 1px 2px;
+}
+
+.icon {
+    font-family: "Nunito Sans", sans-serif;
+    text-align: right;
+    margin: 0px;
+    margin-bottom: -10px;
+    font-size: 1vw;
+    font-style: italic;
 }
