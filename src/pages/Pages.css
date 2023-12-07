@@ -2,9 +2,8 @@
     display: flex;
     justify-content: center;
     font-family: "Nunito Sans", sans-serif;
-    font-size: 2vw;
-    padding-bottom: 5px;
-    font-size: 2.5vw;
+    font-size: 36px;
+    padding-bottom: 15px;
 }
 
 .popular {
@@ -20,10 +19,13 @@
 }
 
 .series {
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .search {
-
+    display: flex;
+    margin: 20px, 0px;
 }
 

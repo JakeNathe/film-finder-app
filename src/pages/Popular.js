@@ -1,9 +1,8 @@
-import React from 'react';
-import { useState, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import axios from "axios";
 import "./Pages.css";
 import IndividualContent from '../components/IndividualContent';
-import PageNumber from '../components/PageNumber';
+import Pagination from '../components/Pagination';
 
 
 
@@ -13,8 +12,8 @@ const Popular = () => {
 
   const fetchPopular = async () => {
     // fetch and destructure data
-    const {data} = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`);
-    console.log(data);
+    const {data} = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${page}`
+    );
     setContent(data.results);
   };
 
@@ -28,10 +27,10 @@ const Popular = () => {
 // return individual movie/tvshow items with relevant data
   return (
     <div>
-        <span className="pageTitle">POPULAR NOW</span>
-        <div className="popular">
-          {content && content.map((c) => 
-          <IndividualContent 
+      <span className="pageTitle">POPULAR NOW</span>
+      <div className="popular">
+        {content && content.map((c) => (
+        <IndividualContent 
           key={c.id} 
           id={c.id} 
           poster={c.poster_path} 
@@ -39,10 +38,10 @@ const Popular = () => {
           media_type={c.media_type}
           date={c.first_air_date || c.release_date }
           vote_average={c.vote_average}
-          />)}
-        </div>
-        <PageNumber setPage={setPage}/>
-    </div>
+        />))}
+      </div>
+      <Pagination setPage={setPage}/>
+  </div>
   )
 };
 

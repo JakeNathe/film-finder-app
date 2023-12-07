@@ -5,7 +5,7 @@ import "./IndividualContent.css";
 
 
 // break up returned items to invidual movie/show
-const IndividualContent = ({id, poster, title, media_type, date, vote_average}) => {
+const IndividualContent = ({id, poster, title, media_type, date}) => {
   return (
     <div className="content">
       {/* unable to make clear it is a rating being displayed. need to find better icon/new idea later */}

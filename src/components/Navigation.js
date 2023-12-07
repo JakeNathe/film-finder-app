@@ -1,8 +1,4 @@
-/* 
-Navigation code is from material ui: https://mui.com/material-ui/react-bottom-navigation/ 
-*/
-import * as React from 'react';
-import { useState, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
@@ -32,7 +28,7 @@ export default function SimpleBottomNavigation() {
   }, [value, navigate]);
 
   return (
-    <Box sx={{ width: "100%", position: "fixed", bottom: 0}}>
+    <Box sx={{ width: "100%", position: "fixed", bottom: 0 }}>
       <ThemeProvider theme={darkTheme}>
       <CssBaseline/>
 

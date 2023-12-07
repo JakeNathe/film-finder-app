@@ -11,7 +11,7 @@ const darkTheme = createTheme({
 });
 
 
-const PageNumber = ({ setPage }) => {
+const Pagenation = ({ setPage, numOfPages = 20 }) => {
 
     const changePage = (page) => {
         setPage(page);
@@ -21,14 +21,14 @@ const PageNumber = ({ setPage }) => {
 // cannot make 100% width....
   return (
     <div>
-        <Box sx={{width: "100%", justifyContent:"center", display:"flex"}}>
+        <Box sx={{width: "100%", justifyContent:"center", display:"flex", paddingTop: 1.5 }}>
         <ThemeProvider theme={darkTheme}>
             <CssBaseline/>
             <Pagination
                 color="primary" 
                 varient="outlined"
                 shape="rounded"
-                count={10} 
+                count= {numOfPages}
                 hideNextButton // not set up to work
                 hidePrevButton 
                 onChange={(e) => changePage(e.target.textContent)}/>
@@ -38,4 +38,4 @@ const PageNumber = ({ setPage }) => {
   );
 };
 
-export default PageNumber;
+export default Pagenation;
