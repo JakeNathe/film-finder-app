@@ -2,7 +2,6 @@
 Modal code all form material UI - react transition group modal
 */
 import React, { useEffect, useState } from 'react';
-import Backdrop from '@mui/material/Backdrop';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
@@ -20,13 +19,13 @@ const styleModal= {
 };
 
 const stylePaper= {
-  width: "70%",
+  width: "50%",
   height: "94%",
   backgroundColor: "#39445a",
   border: "1px solid #ffffff",
   borderRadius: 3,
   color: "white",
-  padding: 2
+  padding: 3,
 };
 
 export default function ContentModal({ children, media_type, id }) {
@@ -37,13 +36,13 @@ export default function ContentModal({ children, media_type, id }) {
   const handleClose = () => setOpen(false);
 
   const fetchData = async () => {
-    const { data } = await axios.get(`https://api.themoviedb.org/3/${media_type}/${id}?api_key=${process.env.API_KEY}&language=en-US`);
+    const { data } = await axios.get(`https://api.themoviedb.org/3/${media_type}/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
 
     setContent(data);
   };
 
   const fetchVideo = async () => {
-    const { data } = await axios.get(`https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env.API_KEY}&language=en-US`);
+    const { data } = await axios.get(`https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
     // set to first result if exisits 
     setVideo(data.results[0]?.key) ;
   };
@@ -56,10 +55,10 @@ export default function ContentModal({ children, media_type, id }) {
   }, []);
 
   return (
-    <div>
-      <button type="button" className="content" onClick={handleOpen}>
+    <>
+      <div className="content" onClick={handleOpen}>
         {children}
-      </button>
+      </div>
       <Modal
         style={{display: "flex",
           alignItems: "center",
@@ -84,11 +83,13 @@ export default function ContentModal({ children, media_type, id }) {
               alt={content.name || content.title} // for tv or movie
               src={content.poster_path ? `${img_size_500}/${content.poster_path}` : unavailable}
             />
+
             <img 
               className="contentModalLandscape"
               alt={content.name || content.title} // for tv or movie
               src={content.backdrop_path ? `${img_size_500}/${content.backdrop_path}` : unavailableLandscape}
             />
+
             <div className="contentModalAbout">
               <span className="contentModalTitle">
                 {content.name || content.title} (
@@ -97,12 +98,17 @@ export default function ContentModal({ children, media_type, id }) {
               </span>
               {content.tagline && (<i className="contentModalTagline">{content.tagline}</i>)}
               <span className="contentModalDescription">{content.overview}</span>
-              <div></div>
+
+              <div>
+                <Carousel id={id} media_type={media_type} />
+              </div>
+
               <Button
-                varient="contained"
-                color="secondary"
-                target="__blank"
-                href={`https://www.youtube.com/watch?v${video}`}
+                variant="contained"
+                startIcon={<YouTubeIcon />}
+                color="error"
+                size="medium"
+                href={`https://www.youtube.com/watch?v=${video}`}
               >
                 Watch Trailer
               </Button>
@@ -111,6 +117,6 @@ export default function ContentModal({ children, media_type, id }) {
           )}
         </Fade>
       </Modal>
-    </div>
+    </>
   );
 }

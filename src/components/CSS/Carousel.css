@@ -1,0 +1,16 @@
+.carouselItem {
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
+  padding: 8px;
+}
+
+.carouselItemImage {
+  border-radius: 4px;
+  margin-bottom: 4px;
+  box-shadow: 0px 0px 0px 4px black;
+}
+
+.carouselItemText {
+  font-size: 14px;
+}

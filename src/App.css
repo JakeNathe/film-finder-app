@@ -6,3 +6,11 @@
   color: white;
   font-family: "Nunito Sans", sans-serif;
 }
+
+* {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
