@@ -39,6 +39,7 @@ const Search = () => {
     // stop annoying errors
     // eslint-disable-next-line
   }, [type, page]);
+
   
 
   return (
@@ -51,6 +52,11 @@ const Search = () => {
             label="Search"
             variant="filled"
             onChange={ (e) => setSearchText(e.target.value) }
+            onKeyPress={event => {
+              if (event.key === 'Enter') {
+                fetchSearch();
+              }
+            }}
           />
           <Button 
           variant="contained" 
