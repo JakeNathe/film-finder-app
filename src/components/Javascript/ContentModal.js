@@ -12,15 +12,9 @@ import axios from "axios";
 import '../CSS/ContentModal.css';
 import {img_size_500, unavailable, unavailableLandscape} from '../../config/config';
 
-const styleModal= {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-};
-
 const stylePaper= {
-  width: "50%",
-  height: "94%",
+  width: "40%",
+  height: "95%",
   backgroundColor: "#39445a",
   border: "1px solid #ffffff",
   borderRadius: 3,
