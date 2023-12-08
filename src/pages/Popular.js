@@ -12,7 +12,7 @@ const Popular = () => {
 
   const fetchPopular = async () => {
     // fetch and destructure data
-    const {data} = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${page}`
+    const {data} = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.API_KEY}&language=en-US&page=${page}`
     );
     setContent(data.results);
   };

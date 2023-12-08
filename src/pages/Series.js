@@ -18,7 +18,7 @@ const Series = () => {
 
   const fetchSeries = async () => {
     // fetch and destructure data
-    const {data} = await axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=${page}&with_genres=${genreCodes}`
+    const {data} = await axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${process.env.API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=${page}&with_genres=${genreCodes}`
     );
     // &with_genres=${genre}
     setContent(data.results);
