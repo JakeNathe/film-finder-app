@@ -19,8 +19,8 @@
 }
 
 .title {
-    width: 100%;
     text-align: center;
+    width: 100%;
     font-size: 18px;
     padding: 5px 1px 5px 1px;
 }
@@ -36,8 +36,8 @@
 
 .subtitle {
     display: flex;
-    font-size: 14px;
     justify-content: space-between;
+    font-size: 14px;
     padding: 1px 2px 1px 2px;
 }
 

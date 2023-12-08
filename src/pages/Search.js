@@ -4,8 +4,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import { Tab, Tabs, Button, TextField } from '@mui/material';
 import "./Pages.css";
-import IndividualContent from '../components/IndividualContent';
-import Pagination from '../components/Pagination';
+import IndividualContent from '../components/Javascript/IndividualContent';
+import Pagination from '../components/Javascript/Pagination';
 
 
 const darkTheme = createTheme({

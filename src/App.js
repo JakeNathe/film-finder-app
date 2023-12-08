@@ -2,8 +2,8 @@
 Using The Movie Database API https://developer.themoviedb.org/docs
 */
 import './App.css';
-import Header from "./components/Header";
-import SimpleBottomNavigation from './components/Navigation';
+import Header from "./components/Javascript/Header";
+import SimpleBottomNavigation from './components/Javascript/Navigation';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import { Container } from "react-bootstrap";
 import Movies from "./pages/Movies";

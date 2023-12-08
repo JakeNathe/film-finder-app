@@ -1,9 +1,9 @@
 import { React, useState, useEffect } from "react";
 import axios from 'axios';
 import "./Pages.css";
-import IndividualContent from '../components/IndividualContent';
-import Pagination from '../components/Pagination';
-import Genres from '../components/Genres';
+import IndividualContent from '../components/Javascript/IndividualContent';
+import Pagination from '../components/Javascript/Pagination';
+import Genres from '../components/Javascript/Genres';
 import useGenres from '../hooks/useGenres';
 
 
